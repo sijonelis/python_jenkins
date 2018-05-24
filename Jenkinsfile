@@ -1,7 +1,7 @@
 pipeline {
     agent none 
-    ws("/var/jenkins_workspaces/helloworld"){
         stages {
+        ws("/var/jenkins_workspaces/helloworld"){
             stage('Build') { 
                 agent {
                     docker {
