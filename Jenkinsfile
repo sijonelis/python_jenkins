@@ -8,7 +8,8 @@ pipeline {
                 }
             }
             steps {
-                ws("/var/jenkins_workspaces/helloworld"){
+                ws("/var/jenkins_workspaces/"){
+                    sh ls -a
                     sh 'python -m py_compile sources/add2vals.py sources/calc.py' 
                 }
             }
