@@ -8,9 +8,7 @@ pipeline {
                 }
             }
             steps {
-                ws("/var/jenkins_workspaces/"){
-                    sh 'python --version' 
-                }
+                sh 'python --version' 
             }
         }
     }
