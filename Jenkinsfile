@@ -1,17 +1,9 @@
 pipeline {
-    agent {
-        any
-    }
+    agent { docker 'maven:3-alpine' } 
     stages {
-        stage('Setup') { 
-            agent {
-                docker {
-                    image 'python:2-alpine' 
-                    reuseNode true  
-                }
-            }
+        stage('Example Build') {
             steps {
-                sh 'python --version' 
+                sh 'mvn -B clean verify'
             }
         }
     }
