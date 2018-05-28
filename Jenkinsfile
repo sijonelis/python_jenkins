@@ -8,5 +8,11 @@ pipeline {
                 sh 'docker images'
             }
         }
+        stage('mvn') {
+            agent { docker 'maven:3.3.3' }
+            steps {
+                sh 'docker-compose up'
+            }
+        }
     }
 }
