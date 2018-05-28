@@ -1,9 +1,8 @@
 pipeline {
     agent {
         docker {
-                    image 'maven:3.3.3'
-                    args '-v /var/jenkins_data:/var/jenkins_data'
-                    reuseNode true
+                image 'maven:3.3.3'
+                reuseNode true
             }
     }
     stages {
