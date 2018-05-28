@@ -4,7 +4,7 @@ pipeline {
         stage('mvn') {
             agent { docker 'maven:3.3.3' }
             steps {
-                sh 'mvn --version'
+                sh 'docker-compose up'
             }
         }
         stage('docker') {
